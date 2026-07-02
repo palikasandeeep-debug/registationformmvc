@@ -5,17 +5,17 @@
 
 <h2>reg</h2>
 <div>
-    @using (Html.BeginForm("reg", " Registation", FormMethod.Post))
+    @using (Html.BeginForm("Reg", "Registration", FormMethod.Post))
     {
         <div class="mb-3">
-            @Html.LabelFor(m => m.fistName)
-            @Html.TextBoxFor(m => m.fistName)
-            @Html.ValidationMessageFor(m => m.fistName)
-        </div>
+            @Html.LabelFor(m => m.fistName, new{@class = "form-label"})
+            @Html.TextBoxFor(m => m.fistName, new { @class = "form-controler" })
+            @Html.ValidationMessageFor(m => m.fistName,"", new { @class = "text-danger" })
+        </div>}
         <div class="mb-3">
-            @Html.LabelFor(m => m.lastname)
-            @Html.TextBoxFor(m => m.lastname)
-            @Html.ValidationMessageFor(m => m.lastname)
+            @Html.LabelFor(m => m.lastname, new { @class = "form-label" })
+            @Html.TextBoxFor(m => m.lastname, new { @class = "form-controler" })
+            @Html.ValidationMessageFor(m => m.lastname, "", new { @class = "text-danger" })
         </div>
         <div class="mb-3">
             @Html.LabelFor(m => m.email)
@@ -33,7 +33,7 @@
             @Html.ValidationMessageFor(m => m.cpassword)
         </div>
         <div>
-            <input type="submit" value="register" class="btn btn-success" />
+            <input type="submit" value="register" class="btn btn-info" />
         </div>
 
 
