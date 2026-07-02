@@ -1,0 +1,42 @@
+﻿@model registationformmvc.Models.registation
+@{
+    ViewBag.Title = "reg";
+}
+
+<h2>reg</h2>
+<div>
+    @using (Html.BeginForm("reg", " Registation", FormMethod.Post))
+    {
+        <div class="mb-3">
+            @Html.LabelFor(m => m.fistName)
+            @Html.TextBoxFor(m => m.fistName)
+            @Html.ValidationMessageFor(m => m.fistName)
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(m => m.lastname)
+            @Html.TextBoxFor(m => m.lastname)
+            @Html.ValidationMessageFor(m => m.lastname)
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(m => m.email)
+            @Html.TextBoxFor(m => m.email)
+            @Html.ValidationMessageFor(m => m.email)
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(m => m.password)
+            @Html.TextBoxFor(m => m.password)
+            @Html.ValidationMessageFor(m => m.password)
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(m => m.cpassword)
+            @Html.TextBoxFor(m => m.cpassword)
+            @Html.ValidationMessageFor(m => m.cpassword)
+        </div>
+        <div>
+            <input type="submit" value="register" class="btn btn-success" />
+        </div>
+
+
+
+    }
+</div>
